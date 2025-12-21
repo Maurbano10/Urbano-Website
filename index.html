@@ -4,344 +4,504 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Miguel Ángel Urbano - Consultoría industrial estratégica. 25+ años transformando operaciones industriales en ventajas competitivas sostenibles.">
-    <meta name="keywords" content="consultoría industrial, estrategia industrial, excelencia operativa, transformación digital, industria 4.0">
-    <meta name="author" content="Miguel Ángel Urbano Ruiz">
+    <meta name="description" content="Consultoría Industrial Estratégica. Transformando operaciones industriales en ventajas competitivas sostenibles. 25+ años de experiencia en 103 plantas globales.">
+    <title>Miguel Ángel Urbano | Consultoría Industrial Estratégica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
 ```
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://urbano.org.es/">
-<meta property="og:title" content="Miguel Ángel Urbano | Consultoría Industrial Estratégica">
-<meta property="og:description" content="Transformando operaciones industriales en ventajas competitivas sostenibles. 25+ años de experiencia global.">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://urbano.org.es/">
-<meta property="twitter:title" content="Miguel Ángel Urbano | Consultoría Industrial Estratégica">
-<meta property="twitter:description" content="Transformando operaciones industriales en ventajas competitivas sostenibles.">
-
-<title>Miguel Ángel Urbano | Consultoría Industrial Estratégica</title>
-
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+    :root {
+        /* Colores DiCi */
+        --dici-navy: #0A1929;
+        --dici-navy-light: #1A2F42;
+        --dici-blue: #3B82F6;
+        --dici-green: #10B981;
+        --dici-magenta: #C026D3;
+        --dici-orange: #F97316;
+        --dici-cyan: #06B6D4;
+        --text-primary: #FFFFFF;
+        --text-secondary: #94A3B8;
+        --card-bg: rgba(255, 255, 255, 0.05);
+        --card-border: rgba(255, 255, 255, 0.1);
     }
-
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
     body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: linear-gradient(135deg, var(--dici-navy) 0%, #000814 100%);
+        color: var(--text-primary);
         line-height: 1.6;
-        color: #333;
-        overflow-x: hidden;
+        min-height: 100vh;
     }
-
-    .hero {
-        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-        color: white;
-        padding: 100px 20px;
-        text-align: center;
+    
+    /* Header */
+    header {
+        background: rgba(10, 25, 41, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 1.5rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-bottom: 1px solid var(--card-border);
+    }
+    
+    .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, var(--dici-blue) 0%, var(--dici-cyan) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        cursor: pointer;
+    }
+    
+    nav {
+        display: flex;
+        gap: 2rem;
+    }
+    
+    nav a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
         position: relative;
-        overflow: hidden;
     }
-
-    .hero::before {
+    
+    nav a:hover {
+        color: var(--dici-blue);
+    }
+    
+    nav a::after {
         content: '';
         position: absolute;
-        top: 0;
+        bottom: -5px;
         left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".1" fill="%23ffffff"/></svg>') no-repeat bottom;
-        background-size: cover;
-        opacity: 0.1;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--dici-blue), var(--dici-cyan));
+        transition: width 0.3s;
     }
-
+    
+    nav a:hover::after {
+        width: 100%;
+    }
+    
+    /* Mobile Menu Button */
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--text-primary);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    /* Hero Section */
+    .hero {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 6rem 2rem;
+        text-align: center;
+    }
+    
     .hero h1 {
-        font-size: 3em;
-        margin-bottom: 20px;
+        font-size: 3.5rem;
         font-weight: 700;
-        position: relative;
-        z-index: 1;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(135deg, #FFFFFF 0%, var(--dici-cyan) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1.2;
     }
-
+    
     .hero p {
-        font-size: 1.4em;
-        margin-bottom: 30px;
-        position: relative;
-        z-index: 1;
+        font-size: 1.5rem;
+        color: var(--text-secondary);
+        margin-bottom: 3rem;
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
     }
-
+    
     .cta-button {
         display: inline-block;
-        background: #ff6b35;
+        padding: 1rem 2.5rem;
+        background: linear-gradient(135deg, var(--dici-blue) 0%, var(--dici-cyan) 100%);
         color: white;
-        padding: 15px 40px;
         text-decoration: none;
-        border-radius: 50px;
-        font-size: 1.1em;
+        border-radius: 12px;
         font-weight: 600;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
-        position: relative;
-        z-index: 1;
-        cursor: pointer;
-        border: none;
+        font-size: 1.1rem;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
     }
-
+    
     .cta-button:hover {
-        background: #e55a2b;
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+        transform: translateY(-2px);
+        box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);
     }
-
-    .container {
-        max-width: 1200px;
+    
+    /* Sections */
+    section {
+        max-width: 1400px;
         margin: 0 auto;
-        padding: 80px 20px;
+        padding: 5rem 2rem;
     }
-
+    
     .section-title {
         text-align: center;
-        font-size: 2.5em;
-        color: #1e3c72;
-        margin-bottom: 50px;
-        position: relative;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
     }
-
-    .section-title::after {
-        content: '';
-        display: block;
-        width: 80px;
-        height: 4px;
-        background: #ff6b35;
-        margin: 20px auto 0;
-        border-radius: 2px;
+    
+    .section-subtitle {
+        text-align: center;
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        margin-bottom: 3rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
     }
-
-    .value-proposition {
-        background: #f8f9fa;
-        padding: 80px 20px;
-    }
-
-    .value-grid {
+    
+    /* Services Grid */
+    .services-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        margin-top: 50px;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
     }
-
-    .value-card {
-        background: white;
-        padding: 40px;
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    .service-card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        padding: 2rem;
+        transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
     }
-
-    .value-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
     }
-
-    .value-card h3 {
-        color: #1e3c72;
-        font-size: 1.5em;
-        margin-bottom: 15px;
+    
+    .service-card:nth-child(1):hover {
+        border-color: var(--dici-blue);
     }
-
-    .value-card p {
-        color: #666;
+    
+    .service-card:nth-child(2):hover {
+        border-color: var(--dici-green);
+    }
+    
+    .service-card:nth-child(3):hover {
+        border-color: var(--dici-magenta);
+    }
+    
+    .service-card:nth-child(4):hover {
+        border-color: var(--dici-orange);
+    }
+    
+    .service-card:nth-child(5):hover {
+        border-color: var(--dici-cyan);
+    }
+    
+    .service-card:nth-child(6):hover {
+        border-color: var(--dici-blue);
+    }
+    
+    .service-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+    }
+    
+    .service-card p {
+        color: var(--text-secondary);
         line-height: 1.8;
     }
-
-    .competencies {
-        background: white;
-    }
-
-    .competency-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 40px;
-        margin-top: 50px;
-    }
-
-    .competency-item {
-        padding: 30px;
-        border-left: 4px solid #ff6b35;
-        background: #f8f9fa;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-    }
-
-    .competency-item:hover {
-        background: white;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    .competency-item h3 {
-        color: #1e3c72;
-        margin-bottom: 15px;
-        font-size: 1.3em;
-    }
-
-    .competency-item p {
-        color: #555;
-        line-height: 1.7;
-    }
-
-    .experience {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        text-align: center;
-        padding: 80px 20px;
-    }
-
-    .experience h2 {
-        color: white;
-        margin-bottom: 30px;
-    }
-
-    .experience .section-title::after {
-        background: white;
-    }
-
-    .stats {
+    
+    /* Service Icons */
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
         display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        margin-top: 50px;
-        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
     }
-
+    
+    .service-card:nth-child(1) .service-icon {
+        background: linear-gradient(135deg, var(--dici-blue), var(--dici-cyan));
+    }
+    
+    .service-card:nth-child(2) .service-icon {
+        background: linear-gradient(135deg, var(--dici-green), var(--dici-cyan));
+    }
+    
+    .service-card:nth-child(3) .service-icon {
+        background: linear-gradient(135deg, var(--dici-magenta), var(--dici-blue));
+    }
+    
+    .service-card:nth-child(4) .service-icon {
+        background: linear-gradient(135deg, var(--dici-orange), var(--dici-magenta));
+    }
+    
+    .service-card:nth-child(5) .service-icon {
+        background: linear-gradient(135deg, var(--dici-cyan), var(--dici-green));
+    }
+    
+    .service-card:nth-child(6) .service-icon {
+        background: linear-gradient(135deg, var(--dici-blue), var(--dici-magenta));
+    }
+    
+    /* Competencies */
+    .competencies-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem;
+        margin-top: 3rem;
+    }
+    
+    .competency-item {
+        background: var(--card-bg);
+        border-left: 4px solid var(--dici-blue);
+        padding: 1.5rem;
+        border-radius: 8px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .competency-item:hover {
+        transform: translateX(5px);
+        box-shadow: 0 5px 20px rgba(59, 130, 246, 0.2);
+    }
+    
+    .competency-item:nth-child(1) {
+        border-left-color: var(--dici-blue);
+    }
+    
+    .competency-item:nth-child(2) {
+        border-left-color: var(--dici-green);
+    }
+    
+    .competency-item:nth-child(3) {
+        border-left-color: var(--dici-cyan);
+    }
+    
+    .competency-item:nth-child(4) {
+        border-left-color: var(--dici-magenta);
+    }
+    
+    .competency-item:nth-child(5) {
+        border-left-color: var(--dici-orange);
+    }
+    
+    .competency-item:nth-child(6) {
+        border-left-color: var(--dici-blue);
+    }
+    
+    .competency-item h4 {
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+    }
+    
+    .competency-item p {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+    }
+    
+    /* Stats */
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+    
     .stat-item {
         text-align: center;
+        padding: 2rem;
+        background: var(--card-bg);
+        border-radius: 16px;
+        border: 1px solid var(--card-border);
+        transition: transform 0.3s, border-color 0.3s;
     }
-
+    
+    .stat-item:hover {
+        transform: translateY(-5px);
+        border-color: var(--dici-blue);
+    }
+    
     .stat-number {
-        font-size: 3em;
+        font-size: 3rem;
         font-weight: 700;
-        display: block;
-        margin-bottom: 10px;
+        background: linear-gradient(135deg, var(--dici-blue) 0%, var(--dici-cyan) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 0.5rem;
     }
-
+    
     .stat-label {
-        font-size: 1.2em;
-        opacity: 0.9;
+        color: var(--text-secondary);
+        font-size: 1rem;
     }
-
-    .contact {
-        background: #1e3c72;
-        color: white;
-        padding: 80px 20px;
-        text-align: center;
-    }
-
-    .contact h2 {
-        color: white;
-        margin-bottom: 20px;
-        font-size: 2.5em;
-    }
-
-    .contact h2::after {
-        display: none;
-    }
-
-    .contact > p {
-        font-size: 1.2em;
-        margin-bottom: 40px;
-    }
-
-    .contact-form {
-        max-width: 600px;
+    
+    /* Contact Section */
+    .contact-wrapper {
+        max-width: 800px;
         margin: 0 auto;
-        text-align: left;
     }
-
+    
+    .contact-intro {
+        text-align: center;
+        color: var(--text-secondary);
+        margin-bottom: 3rem;
+        font-size: 1.1rem;
+    }
+    
+    .contact-section {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 20px;
+        padding: 3rem;
+    }
+    
     .form-group {
-        margin-bottom: 25px;
+        margin-bottom: 1.5rem;
     }
-
+    
     .form-group label {
         display: block;
-        margin-bottom: 8px;
-        font-weight: 600;
-        color: white;
+        margin-bottom: 0.5rem;
+        color: var(--text-secondary);
+        font-weight: 500;
     }
-
+    
     .form-group input,
     .form-group textarea {
         width: 100%;
-        padding: 15px;
-        border: none;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--card-border);
         border-radius: 8px;
-        font-size: 1em;
+        color: var(--text-primary);
         font-family: inherit;
-        background: rgba(255, 255, 255, 0.95);
-        transition: background 0.3s ease;
+        font-size: 1rem;
+        transition: border-color 0.3s, box-shadow 0.3s;
     }
-
+    
     .form-group input:focus,
     .form-group textarea:focus {
         outline: none;
-        background: white;
-        box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.3);
+        border-color: var(--dici-blue);
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
     }
-
+    
     .form-group textarea {
         min-height: 150px;
         resize: vertical;
     }
-
-    .form-message {
-        margin-top: 20px;
-        padding: 15px;
-        border-radius: 8px;
-        display: none;
-    }
-
-    .form-message.success {
-        background: #4caf50;
+    
+    .submit-button {
+        width: 100%;
+        padding: 1.2rem;
+        background: linear-gradient(135deg, var(--dici-blue) 0%, var(--dici-cyan) 100%);
         color: white;
-        display: block;
+        border: none;
+        border-radius: 12px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+        font-family: inherit;
     }
-
-    .form-message.error {
-        background: #f44336;
-        color: white;
-        display: block;
+    
+    .submit-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
     }
-
+    
+    /* Footer */
     footer {
-        background: #0f1f3d;
-        color: white;
+        background: var(--dici-navy-light);
         text-align: center;
-        padding: 30px 20px;
+        padding: 2rem;
+        margin-top: 5rem;
+        border-top: 1px solid var(--card-border);
     }
-
+    
+    footer p {
+        color: var(--text-secondary);
+        margin: 0.25rem 0;
+    }
+    
+    /* Responsive */
     @media (max-width: 768px) {
         .hero h1 {
-            font-size: 2em;
+            font-size: 2.5rem;
         }
-
+        
         .hero p {
-            font-size: 1.1em;
+            font-size: 1.2rem;
         }
-
-        .section-title {
-            font-size: 2em;
+        
+        nav {
+            display: none;
         }
-
-        .value-grid, .competency-list {
+        
+        nav.mobile-open {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(10, 25, 41, 0.98);
+            padding: 1rem 2rem;
+            gap: 1rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+        
+        .mobile-menu-btn {
+            display: block;
+        }
+        
+        .services-grid,
+        .competencies-grid {
             grid-template-columns: 1fr;
         }
-
-        .stat-number {
-            font-size: 2.5em;
+        
+        section {
+            padding: 3rem 1.5rem;
+        }
+        
+        .contact-section {
+            padding: 2rem 1.5rem;
         }
     }
 </style>
@@ -349,185 +509,220 @@
 
 </head>
 <body>
-    <section class="hero">
-        <h1>Miguel Ángel Urbano Ruiz</h1>
-        <p>Transformando operaciones industriales en ventajas competitivas sostenibles</p>
-        <a href="#contact" class="cta-button">Hablemos de tu proyecto</a>
-    </section>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                Miguel Ángel Urbano
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <nav id="mainNav">
+                <a href="#servicios">Servicios</a>
+                <a href="#competencias">Competencias</a>
+                <a href="#impacto">Impacto</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
 
 ```
-<section class="value-proposition">
-    <div class="container">
-        <h2 class="section-title">Áreas de Impacto</h2>
-        <div class="value-grid">
-            <div class="value-card">
-                <h3>Estrategia Industrial y Liderazgo Operativo</h3>
-                <p>Formulación de estrategias industriales integrales alineadas con objetivos corporativos. Optimización de portafolios industriales y gestión estratégica de stakeholders con visión global y resultados medibles.</p>
-            </div>
-            <div class="value-card">
-                <h3>Excelencia Operativa y Gestión de Activos</h3>
-                <p>Mejora de eficiencia operacional, productividad y rentabilidad. Implementación de Lean, Six Sigma y optimización de mantenimiento para operaciones más ágiles, seguras y competitivas.</p>
-            </div>
-            <div class="value-card">
-                <h3>Transformación Organizacional</h3>
-                <p>Diseño e implementación de programas de cambio cultural y organizativo. Construcción de culturas de alto rendimiento y estructuras adaptativas para el futuro de tu industria.</p>
-            </div>
-            <div class="value-card">
-                <h3>Innovación Tecnológica y Sostenibilidad</h3>
-                <p>Incorporación de Industria 4.0, digitalización y estrategias de sostenibilidad. Integración de innovación responsable con rentabilidad y cumplimiento de objetivos ambientales.</p>
-            </div>
-            <div class="value-card">
-                <h3>Supply Chain y Gestión de Compras</h3>
-                <p>Optimización de cadena de suministro y estrategias de aprovisionamiento. Negociación de contratos estratégicos, reducción de costes de materias primas y mejora de la eficiencia logística para garantizar continuidad operativa.</p>
-            </div>
-            <div class="value-card">
-                <h3>Desarrollo de Talento</h3>
-                <p>Fortalecimiento del capital humano mediante programas de formación, academias corporativas y planes de sucesión. Creación de equipos de alto rendimiento y reducción de fuga de talento.</p>
-            </div>
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Miguel Ángel Urbano Ruiz</h1>
+    <p>Transformando operaciones industriales en ventajas competitivas sostenibles</p>
+    <a href="#contacto" class="cta-button">Hablemos de tu proyecto</a>
+</section>
+
+<!-- Services Section -->
+<section id="servicios">
+    <h2 class="section-title">Áreas de Impacto</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="service-icon">🎯</div>
+            <h3>Estrategia Industrial y Liderazgo Operativo</h3>
+            <p>Formulación de estrategias industriales integrales alineadas con objetivos corporativos. Optimización de portafolios industriales y gestión estratégica de stakeholders con visión global y resultados medibles.</p>
+        </div>
+        
+        <div class="service-card">
+            <div class="service-icon">⚙️</div>
+            <h3>Excelencia Operativa y Gestión de Activos</h3>
+            <p>Mejora de eficiencia operacional, productividad y rentabilidad. Implementación de Lean, Six Sigma y optimización de mantenimiento para operaciones más ágiles, seguras y competitivas.</p>
+        </div>
+        
+        <div class="service-card">
+            <div class="service-icon">🔄</div>
+            <h3>Transformación Organizacional</h3>
+            <p>Diseño e implementación de programas de cambio cultural y organizativo. Construcción de culturas de alto rendimiento y estructuras adaptativas para el futuro de tu industria.</p>
+        </div>
+        
+        <div class="service-card">
+            <div class="service-icon">💡</div>
+            <h3>Innovación Tecnológica y Sostenibilidad</h3>
+            <p>Incorporación de Industria 4.0, digitalización y estrategias de sostenibilidad. Integración de innovación responsable con rentabilidad y cumplimiento de objetivos ambientales.</p>
+        </div>
+        
+        <div class="service-card">
+            <div class="service-icon">🔗</div>
+            <h3>Supply Chain y Gestión de Compras</h3>
+            <p>Optimización de cadena de suministro y estrategias de aprovisionamiento. Negociación de contratos estratégicos, reducción de costes de materias primas y mejora de la eficiencia logística para garantizar continuidad operativa.</p>
+        </div>
+        
+        <div class="service-card">
+            <div class="service-icon">👥</div>
+            <h3>Desarrollo de Talento</h3>
+            <p>Fortalecimiento del capital humano mediante programas de formación, academias corporativas y planes de sucesión. Creación de equipos de alto rendimiento y reducción de fuga de talento.</p>
         </div>
     </div>
 </section>
 
-<section class="competencies">
-    <div class="container">
-        <h2 class="section-title">Competencias Clave</h2>
-        <div class="competency-list">
-            <div class="competency-item">
-                <h3>Liderazgo Estratégico Global</h3>
-                <p>Experiencia coordinando operaciones en más de 103 plantas a nivel mundial. Capacidad para alinear estrategias industriales complejas con objetivos de negocio en entornos multiculturales.</p>
-            </div>
-            <div class="competency-item">
-                <h3>Gestión Integral de Operaciones</h3>
-                <p>Dirección de plantas industriales de gran escala con equipos de 300+ empleados, logrando niveles de EBIT del 28%. Optimización de procesos y cumplimiento de objetivos financieros ambiciosos.</p>
-            </div>
-            <div class="competency-item">
-                <h3>Excelencia en Procesos</h3>
-                <p>Incremento del 5% en MTBF y mitigación del 87% del impacto inflacionario mediante planificación estratégica. Experto en mejora continua y confiabilidad de activos industriales.</p>
-            </div>
-            <div class="competency-item">
-                <h3>Gestión del Cambio</h3>
-                <p>Transformación de culturas organizacionales en decenas de plantas europeas, logrando incrementos del 34% en EBIT. Capacidad para superar resistencias y generar adopción exitosa de cambios.</p>
-            </div>
-            <div class="competency-item">
-                <h3>Desarrollo de Equipos</h3>
-                <p>Creación de programas de formación que redujeron la rotación de talento en un 10%. Liderazgo cercano que transforma equipos conflictivos en colaborativos de alto rendimiento.</p>
-            </div>
-            <div class="competency-item">
-                <h3>Negociación Estratégica</h3>
-                <p>Acuerdos de suministro a 15 años y reducciones del 15% en costes energéticos. Gestión efectiva de stakeholders, autoridades y negociaciones de alto impacto.</p>
-            </div>
+<!-- Competencies Section -->
+<section id="competencias">
+    <h2 class="section-title">Competencias Clave</h2>
+    <div class="competencies-grid">
+        <div class="competency-item">
+            <h4>Liderazgo Estratégico Global</h4>
+            <p>Experiencia coordinando operaciones en más de 103 plantas a nivel mundial. Capacidad para alinear estrategias industriales complejas con objetivos de negocio en entornos multiculturales.</p>
+        </div>
+        
+        <div class="competency-item">
+            <h4>Gestión Integral de Operaciones</h4>
+            <p>Dirección de plantas industriales de gran escala con equipos de 300+ empleados, logrando niveles de EBIT del 28%. Optimización de procesos y cumplimiento de objetivos financieros ambiciosos.</p>
+        </div>
+        
+        <div class="competency-item">
+            <h4>Excelencia en Procesos</h4>
+            <p>Incremento del 5% en MTBF y mitigación del 87% del impacto inflacionario mediante planificación estratégica. Experto en mejora continua y confiabilidad de activos industriales.</p>
+        </div>
+        
+        <div class="competency-item">
+            <h4>Gestión del Cambio</h4>
+            <p>Transformación de culturas organizacionales en decenas de plantas europeas, logrando incrementos del 34% en EBIT. Capacidad para superar resistencias y generar adopción exitosa de cambios.</p>
+        </div>
+        
+        <div class="competency-item">
+            <h4>Desarrollo de Equipos</h4>
+            <p>Creación de programas de formación que redujeron la rotación de talento en un 10%. Liderazgo cercano que transforma equipos conflictivos en colaborativos de alto rendimiento.</p>
+        </div>
+        
+        <div class="competency-item">
+            <h4>Negociación Estratégica</h4>
+            <p>Acuerdos de suministro a 15 años y reducciones del 15% en costes energéticos. Gestión efectiva de stakeholders, autoridades y negociaciones de alto impacto.</p>
         </div>
     </div>
 </section>
 
-<section class="experience">
+<!-- Impact Stats -->
+<section id="impacto">
     <h2 class="section-title">Trayectoria de Impacto</h2>
     <div class="stats">
         <div class="stat-item">
-            <span class="stat-number">25+</span>
-            <span class="stat-label">Años de experiencia</span>
+            <div class="stat-number">25+</div>
+            <div class="stat-label">Años de experiencia</div>
         </div>
         <div class="stat-item">
-            <span class="stat-number">103</span>
-            <span class="stat-label">Plantas coordinadas</span>
+            <div class="stat-number">103</div>
+            <div class="stat-label">Plantas coordinadas</div>
         </div>
         <div class="stat-item">
-            <span class="stat-number">34%</span>
-            <span class="stat-label">Mejora en EBIT</span>
+            <div class="stat-number">34%</div>
+            <div class="stat-label">Mejora en EBIT</div>
         </div>
         <div class="stat-item">
-            <span class="stat-number">87%</span>
-            <span class="stat-label">Reducción de impacto inflacionario</span>
+            <div class="stat-number">87%</div>
+            <div class="stat-label">Reducción de impacto inflacionario</div>
         </div>
     </div>
 </section>
 
-<section class="contact" id="contact">
-    <div class="container">
-        <h2>¿Listo para transformar tu operación industrial?</h2>
-        <p>Convirtamos los desafíos de tu empresa en oportunidades de crecimiento sostenible</p>
+<!-- Contact Section -->
+<section id="contacto">
+    <div class="contact-wrapper">
+        <h2 class="section-title">¿Listo para transformar tu operación industrial?</h2>
+        <p class="contact-intro">
+            Convirtamos los desafíos de tu empresa en oportunidades de crecimiento sostenible
+        </p>
         
-        <div class="contact-form">
-            <div id="formMessage" class="form-message"></div>
-            
-            <div class="form-group">
-                <label for="name">Nombre *</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="company">Empresa</label>
-                <input type="text" id="company" name="company">
-            </div>
-            
-            <div class="form-group">
-                <label for="phone">Teléfono</label>
-                <input type="tel" id="phone" name="phone">
-            </div>
-            
-            <div class="form-group">
-                <label for="message">Mensaje *</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            
-            <button type="button" class="cta-button" onclick="sendEmail()">Enviar mensaje</button>
+        <div class="contact-section">
+            <form id="contactForm" onsubmit="return handleSubmit(event)">
+                <div class="form-group">
+                    <label for="nombre">Nombre *</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="empresa">Empresa</label>
+                    <input type="text" id="empresa" name="empresa">
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Enviar mensaje</button>
+            </form>
         </div>
     </div>
 </section>
 
+<!-- Footer -->
 <footer>
     <p>&copy; 2025 Miguel Ángel Urbano Ruiz | Consultoría Industrial Estratégica</p>
-    <p style="margin-top: 10px; font-size: 0.9em;">urbano.org.es</p>
+    <p>urbano.org.es</p>
 </footer>
 
 <script>
-    function sendEmail() {
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const company = document.getElementById('company').value;
-        const phone = document.getElementById('phone').value;
-        const message = document.getElementById('message').value;
-        const formMessage = document.getElementById('formMessage');
+    // Mobile menu toggle
+    function toggleMenu() {
+        const nav = document.getElementById('mainNav');
+        nav.classList.toggle('mobile-open');
+    }
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            const nav = document.getElementById('mainNav');
+            nav.classList.remove('mobile-open');
+        });
+    });
+
+    // Form submission
+    function handleSubmit(event) {
+        event.preventDefault();
         
-        if (!name || !email || !message) {
-            formMessage.className = 'form-message error';
-            formMessage.textContent = 'Por favor, completa todos los campos obligatorios.';
-            return;
-        }
+        // Aquí puedes agregar tu lógica de envío de formulario
+        // Por ejemplo, enviar a un servicio de email o backend
         
-        // Construir el cuerpo del email
-        const subject = encodeURIComponent('Consulta desde urbano.org.es - ' + name);
-        const body = encodeURIComponent(
-            'Nombre: ' + name + '\n' +
-            'Email: ' + email + '\n' +
-            'Empresa: ' + (company || 'No especificada') + '\n' +
-            'Teléfono: ' + (phone || 'No especificado') + '\n\n' +
-            'Mensaje:\n' + message
-        );
+        const formData = {
+            nombre: document.getElementById('nombre').value,
+            email: document.getElementById('email').value,
+            empresa: document.getElementById('empresa').value,
+            telefono: document.getElementById('telefono').value,
+            mensaje: document.getElementById('mensaje').value
+        };
         
-        // Abrir cliente de email
-        window.location.href = 'mailto:contacto@urbano.org.es?subject=' + subject + '&body=' + body;
+        console.log('Formulario enviado:', formData);
         
         // Mostrar mensaje de éxito
-        formMessage.className = 'form-message success';
-        formMessage.textContent = 'Abriendo tu cliente de email... Si no se abre automáticamente, puedes escribir a contacto@urbano.org.es';
+        alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
         
-        // Limpiar formulario
-        setTimeout(() => {
-            document.getElementById('name').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('company').value = '';
-            document.getElementById('phone').value = '';
-            document.getElementById('message').value = '';
-        }, 2000);
+        // Resetear formulario
+        document.getElementById('contactForm').reset();
+        
+        return false;
     }
-    
-    // Smooth scroll para enlaces
+
+    // Smooth scroll para navegación
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
