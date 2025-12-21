@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Consultoría Industrial Estratégica. Transformando operaciones industriales en ventajas competitivas sostenibles. 25+ años de experiencia en 103 plantas globales.">
+    <meta name="description" content="Consultoría Industrial Estratégica. Transformando operaciones industriales en ventajas competitivas sostenibles.">
     <title>Miguel Ángel Urbano | Consultoría Industrial Estratégica</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,501 +14,441 @@
             padding: 0;
             box-sizing: border-box;
         }
-
-```
-    :root {
-        /* Colores DiCi */
-        --dici-navy: #0A1929;
-        --dici-navy-light: #1A2F42;
-        --dici-blue: #3B82F6;
-        --dici-green: #10B981;
-        --dici-magenta: #C026D3;
-        --dici-orange: #F97316;
-        --dici-cyan: #06B6D4;
-        --text-primary: #FFFFFF;
-        --text-secondary: #94A3B8;
-        --card-bg: rgba(255, 255, 255, 0.05);
-        --card-border: rgba(255, 255, 255, 0.1);
-    }
-    
-    html {
-        scroll-behavior: smooth;
-    }
-    
-    body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        background: linear-gradient(135deg, var(--dici-navy) 0%, #000814 100%);
-        color: var(--text-primary);
-        line-height: 1.6;
-        min-height: 100vh;
-    }
-    
-    /* Header */
-    header {
-        background: rgba(10, 25, 41, 0.95);
-        backdrop-filter: blur(10px);
-        padding: 1.5rem 2rem;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        border-bottom: 1px solid var(--card-border);
-    }
-    
-    .header-content {
-        max-width: 1400px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .logo {
-        font-size: 1.5rem;
-        font-weight: 700;
-        background: linear-gradient(135deg, var(--dici-blue) 0%, var(--dici-cyan) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        cursor: pointer;
-    }
-    
-    nav {
-        display: flex;
-        gap: 2rem;
-    }
-    
-    nav a {
-        color: var(--text-secondary);
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s;
-        position: relative;
-    }
-    
-    nav a:hover {
-        color: var(--dici-blue);
-    }
-    
-    nav a::after {
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: linear-gradient(90deg, var(--dici-blue), var(--dici-cyan));
-        transition: width 0.3s;
-    }
-    
-    nav a:hover::after {
-        width: 100%;
-    }
-    
-    /* Mobile Menu Button */
-    .mobile-menu-btn {
-        display: none;
-        background: none;
-        border: none;
-        color: var(--text-primary);
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
-    
-    /* Hero Section */
-    .hero {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 6rem 2rem;
-        text-align: center;
-    }
-    
-    .hero h1 {
-        font-size: 3.5rem;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        background: linear-gradient(135deg, #FFFFFF 0%, var(--dici-cyan) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        line-height: 1.2;
-    }
-    
-    .hero p {
-        font-size: 1.5rem;
-        color: var(--text-secondary);
-        margin-bottom: 3rem;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .cta-button {
-        display: inline-block;
-        padding: 1rem 2.5rem;
-        background: linear-gradient(135deg, var(--dici-blue) 0%, var(--dici-cyan) 100%);
-        color: white;
-        text-decoration: none;
-        border-radius: 12px;
-        font-weight: 600;
-        font-size: 1.1rem;
-        transition: transform 0.3s, box-shadow 0.3s;
-        box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
-    }
-    
-    .cta-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);
-    }
-    
-    /* Sections */
-    section {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 5rem 2rem;
-    }
-    
-    .section-title {
-        text-align: center;
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-        color: var(--text-primary);
-    }
-    
-    .section-subtitle {
-        text-align: center;
-        font-size: 1.1rem;
-        color: var(--text-secondary);
-        margin-bottom: 3rem;
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    /* Services Grid */
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
-    }
-    
-    .service-card {
-        background: var(--card-bg);
-        border: 1px solid var(--card-border);
-        border-radius: 16px;
-        padding: 2rem;
-        transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
-    }
-    
-    .service-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
-    }
-    
-    .service-card:nth-child(1):hover {
-        border-color: var(--dici-blue);
-    }
-    
-    .service-card:nth-child(2):hover {
-        border-color: var(--dici-green);
-    }
-    
-    .service-card:nth-child(3):hover {
-        border-color: var(--dici-magenta);
-    }
-    
-    .service-card:nth-child(4):hover {
-        border-color: var(--dici-orange);
-    }
-    
-    .service-card:nth-child(5):hover {
-        border-color: var(--dici-cyan);
-    }
-    
-    .service-card:nth-child(6):hover {
-        border-color: var(--dici-blue);
-    }
-    
-    .service-card h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        color: var(--text-primary);
-    }
-    
-    .service-card p {
-        color: var(--text-secondary);
-        line-height: 1.8;
-    }
-    
-    /* Service Icons */
-    .service-icon {
-        width: 60px;
-        height: 60px;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1.5rem;
-        font-size: 1.8rem;
-    }
-    
-    .service-card:nth-child(1) .service-icon {
-        background: linear-gradient(135deg, var(--dici-blue), var(--dici-cyan));
-    }
-    
-    .service-card:nth-child(2) .service-icon {
-        background: linear-gradient(135deg, var(--dici-green), var(--dici-cyan));
-    }
-    
-    .service-card:nth-child(3) .service-icon {
-        background: linear-gradient(135deg, var(--dici-magenta), var(--dici-blue));
-    }
-    
-    .service-card:nth-child(4) .service-icon {
-        background: linear-gradient(135deg, var(--dici-orange), var(--dici-magenta));
-    }
-    
-    .service-card:nth-child(5) .service-icon {
-        background: linear-gradient(135deg, var(--dici-cyan), var(--dici-green));
-    }
-    
-    .service-card:nth-child(6) .service-icon {
-        background: linear-gradient(135deg, var(--dici-blue), var(--dici-magenta));
-    }
-    
-    /* Competencies */
-    .competencies-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 1.5rem;
-        margin-top: 3rem;
-    }
-    
-    .competency-item {
-        background: var(--card-bg);
-        border-left: 4px solid var(--dici-blue);
-        padding: 1.5rem;
-        border-radius: 8px;
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-    
-    .competency-item:hover {
-        transform: translateX(5px);
-        box-shadow: 0 5px 20px rgba(59, 130, 246, 0.2);
-    }
-    
-    .competency-item:nth-child(1) {
-        border-left-color: var(--dici-blue);
-    }
-    
-    .competency-item:nth-child(2) {
-        border-left-color: var(--dici-green);
-    }
-    
-    .competency-item:nth-child(3) {
-        border-left-color: var(--dici-cyan);
-    }
-    
-    .competency-item:nth-child(4) {
-        border-left-color: var(--dici-magenta);
-    }
-    
-    .competency-item:nth-child(5) {
-        border-left-color: var(--dici-orange);
-    }
-    
-    .competency-item:nth-child(6) {
-        border-left-color: var(--dici-blue);
-    }
-    
-    .competency-item h4 {
-        color: var(--text-primary);
-        margin-bottom: 0.5rem;
-        font-size: 1.2rem;
-    }
-    
-    .competency-item p {
-        color: var(--text-secondary);
-        font-size: 0.95rem;
-    }
-    
-    /* Stats */
-    .stats {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 2rem;
-        margin-top: 4rem;
-    }
-    
-    .stat-item {
-        text-align: center;
-        padding: 2rem;
-        background: var(--card-bg);
-        border-radius: 16px;
-        border: 1px solid var(--card-border);
-        transition: transform 0.3s, border-color 0.3s;
-    }
-    
-    .stat-item:hover {
-        transform: translateY(-5px);
-        border-color: var(--dici-blue);
-    }
-    
-    .stat-number {
-        font-size: 3rem;
-        font-weight: 700;
-        background: linear-gradient(135deg, var(--dici-blue) 0%, var(--dici-cyan) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        margin-bottom: 0.5rem;
-    }
-    
-    .stat-label {
-        color: var(--text-secondary);
-        font-size: 1rem;
-    }
-    
-    /* Contact Section */
-    .contact-wrapper {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-    
-    .contact-intro {
-        text-align: center;
-        color: var(--text-secondary);
-        margin-bottom: 3rem;
-        font-size: 1.1rem;
-    }
-    
-    .contact-section {
-        background: var(--card-bg);
-        border: 1px solid var(--card-border);
-        border-radius: 20px;
-        padding: 3rem;
-    }
-    
-    .form-group {
-        margin-bottom: 1.5rem;
-    }
-    
-    .form-group label {
-        display: block;
-        margin-bottom: 0.5rem;
-        color: var(--text-secondary);
-        font-weight: 500;
-    }
-    
-    .form-group input,
-    .form-group textarea {
-        width: 100%;
-        padding: 1rem;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid var(--card-border);
-        border-radius: 8px;
-        color: var(--text-primary);
-        font-family: inherit;
-        font-size: 1rem;
-        transition: border-color 0.3s, box-shadow 0.3s;
-    }
-    
-    .form-group input:focus,
-    .form-group textarea:focus {
-        outline: none;
-        border-color: var(--dici-blue);
-        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-    }
-    
-    .form-group textarea {
-        min-height: 150px;
-        resize: vertical;
-    }
-    
-    .submit-button {
-        width: 100%;
-        padding: 1.2rem;
-        background: linear-gradient(135deg, var(--dici-blue) 0%, var(--dici-cyan) 100%);
-        color: white;
-        border: none;
-        border-radius: 12px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: transform 0.3s, box-shadow 0.3s;
-        font-family: inherit;
-    }
-    
-    .submit-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
-    }
-    
-    /* Footer */
-    footer {
-        background: var(--dici-navy-light);
-        text-align: center;
-        padding: 2rem;
-        margin-top: 5rem;
-        border-top: 1px solid var(--card-border);
-    }
-    
-    footer p {
-        color: var(--text-secondary);
-        margin: 0.25rem 0;
-    }
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-        .hero h1 {
-            font-size: 2.5rem;
+        
+        :root {
+            --dici-navy: #0A1929;
+            --dici-navy-light: #1A2F42;
+            --dici-blue: #3B82F6;
+            --dici-green: #10B981;
+            --dici-magenta: #C026D3;
+            --dici-orange: #F97316;
+            --dici-cyan: #06B6D4;
+            --text-primary: #FFFFFF;
+            --text-secondary: #94A3B8;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.1);
         }
         
-        .hero p {
-            font-size: 1.2rem;
+        html {
+            scroll-behavior: smooth;
         }
         
-        nav {
-            display: none;
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, var(--dici-navy) 0%, #000814 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
         }
         
-        nav.mobile-open {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: rgba(10, 25, 41, 0.98);
-            padding: 1rem 2rem;
-            gap: 1rem;
+        header {
+            background: rgba(10, 25, 41, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
             border-bottom: 1px solid var(--card-border);
         }
         
-        .mobile-menu-btn {
-            display: block;
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
-        .services-grid,
-        .competencies-grid {
-            grid-template-columns: 1fr;
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--dici-blue) 0%, var(--dici-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            cursor: pointer;
+        }
+        
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--dici-blue);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--dici-blue), var(--dici-cyan));
+            transition: width 0.3s;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .hero {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #FFFFFF 0%, var(--dici-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--dici-blue) 0%, var(--dici-cyan) 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);
         }
         
         section {
-            padding: 3rem 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+        }
+        
+        .service-card:nth-child(1):hover { border-color: var(--dici-blue); }
+        .service-card:nth-child(2):hover { border-color: var(--dici-green); }
+        .service-card:nth-child(3):hover { border-color: var(--dici-magenta); }
+        .service-card:nth-child(4):hover { border-color: var(--dici-orange); }
+        .service-card:nth-child(5):hover { border-color: var(--dici-cyan); }
+        .service-card:nth-child(6):hover { border-color: var(--dici-blue); }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .service-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .service-card:nth-child(1) .service-icon {
+            background: linear-gradient(135deg, var(--dici-blue), var(--dici-cyan));
+        }
+        
+        .service-card:nth-child(2) .service-icon {
+            background: linear-gradient(135deg, var(--dici-green), var(--dici-cyan));
+        }
+        
+        .service-card:nth-child(3) .service-icon {
+            background: linear-gradient(135deg, var(--dici-magenta), var(--dici-blue));
+        }
+        
+        .service-card:nth-child(4) .service-icon {
+            background: linear-gradient(135deg, var(--dici-orange), var(--dici-magenta));
+        }
+        
+        .service-card:nth-child(5) .service-icon {
+            background: linear-gradient(135deg, var(--dici-cyan), var(--dici-green));
+        }
+        
+        .service-card:nth-child(6) .service-icon {
+            background: linear-gradient(135deg, var(--dici-blue), var(--dici-magenta));
+        }
+        
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .competency-item {
+            background: var(--card-bg);
+            border-left: 4px solid var(--dici-blue);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .competency-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(59, 130, 246, 0.2);
+        }
+        
+        .competency-item:nth-child(1) { border-left-color: var(--dici-blue); }
+        .competency-item:nth-child(2) { border-left-color: var(--dici-green); }
+        .competency-item:nth-child(3) { border-left-color: var(--dici-cyan); }
+        .competency-item:nth-child(4) { border-left-color: var(--dici-magenta); }
+        .competency-item:nth-child(5) { border-left-color: var(--dici-orange); }
+        .competency-item:nth-child(6) { border-left-color: var(--dici-blue); }
+        
+        .competency-item h4 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .competency-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid var(--card-border);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--dici-blue);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--dici-blue) 0%, var(--dici-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+        
+        .contact-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-intro {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
         }
         
         .contact-section {
-            padding: 2rem 1.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 3rem;
         }
-    }
-</style>
-```
-
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--dici-blue);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, var(--dici-blue) 0%, var(--dici-cyan) 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-family: inherit;
+        }
+        
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+        }
+        
+        footer {
+            background: var(--dici-navy-light);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 5rem;
+            border-top: 1px solid var(--card-border);
+        }
+        
+        footer p {
+            color: var(--text-secondary);
+            margin: 0.25rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            nav {
+                display: none;
+            }
+            
+            nav.mobile-open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(10, 25, 41, 0.98);
+                padding: 1rem 2rem;
+                gap: 1rem;
+                border-bottom: 1px solid var(--card-border);
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .services-grid,
+            .competencies-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            section {
+                padding: 3rem 1.5rem;
+            }
+            
+            .contact-section {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="header-content">
             <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
@@ -525,218 +464,180 @@
         </div>
     </header>
 
-```
-<!-- Hero Section -->
-<section class="hero">
-    <h1>Miguel Ángel Urbano Ruiz</h1>
-    <p>Transformando operaciones industriales en ventajas competitivas sostenibles</p>
-    <a href="#contacto" class="cta-button">Hablemos de tu proyecto</a>
-</section>
+    <section class="hero">
+        <h1>Miguel Ángel Urbano Ruiz</h1>
+        <p>Transformando operaciones industriales en ventajas competitivas sostenibles</p>
+        <a href="#contacto" class="cta-button">Hablemos de tu proyecto</a>
+    </section>
 
-<!-- Services Section -->
-<section id="servicios">
-    <h2 class="section-title">Áreas de Impacto</h2>
-    <div class="services-grid">
-        <div class="service-card">
-            <div class="service-icon">🎯</div>
-            <h3>Estrategia Industrial y Liderazgo Operativo</h3>
-            <p>Formulación de estrategias industriales integrales alineadas con objetivos corporativos. Optimización de portafolios industriales y gestión estratégica de stakeholders con visión global y resultados medibles.</p>
+    <section id="servicios">
+        <h2 class="section-title">Áreas de Impacto</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>Estrategia Industrial y Liderazgo Operativo</h3>
+                <p>Formulación de estrategias industriales integrales alineadas con objetivos corporativos. Optimización de portafolios industriales y gestión estratégica de stakeholders con visión global y resultados medibles.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>Excelencia Operativa y Gestión de Activos</h3>
+                <p>Mejora de eficiencia operacional, productividad y rentabilidad. Implementación de Lean, Six Sigma y optimización de mantenimiento para operaciones más ágiles, seguras y competitivas.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🔄</div>
+                <h3>Transformación Organizacional</h3>
+                <p>Diseño e implementación de programas de cambio cultural y organizativo. Construcción de culturas de alto rendimiento y estructuras adaptativas para el futuro de tu industria.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">💡</div>
+                <h3>Innovación Tecnológica y Sostenibilidad</h3>
+                <p>Incorporación de Industria 4.0, digitalización y estrategias de sostenibilidad. Integración de innovación responsable con rentabilidad y cumplimiento de objetivos ambientales.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🔗</div>
+                <h3>Supply Chain y Gestión de Compras</h3>
+                <p>Optimización de cadena de suministro y estrategias de aprovisionamiento. Negociación de contratos estratégicos, reducción de costes de materias primas y mejora de la eficiencia logística para garantizar continuidad operativa.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">👥</div>
+                <h3>Desarrollo de Talento</h3>
+                <p>Fortalecimiento del capital humano mediante programas de formación, academias corporativas y planes de sucesión. Creación de equipos de alto rendimiento y reducción de fuga de talento.</p>
+            </div>
         </div>
-        
-        <div class="service-card">
-            <div class="service-icon">⚙️</div>
-            <h3>Excelencia Operativa y Gestión de Activos</h3>
-            <p>Mejora de eficiencia operacional, productividad y rentabilidad. Implementación de Lean, Six Sigma y optimización de mantenimiento para operaciones más ágiles, seguras y competitivas.</p>
-        </div>
-        
-        <div class="service-card">
-            <div class="service-icon">🔄</div>
-            <h3>Transformación Organizacional</h3>
-            <p>Diseño e implementación de programas de cambio cultural y organizativo. Construcción de culturas de alto rendimiento y estructuras adaptativas para el futuro de tu industria.</p>
-        </div>
-        
-        <div class="service-card">
-            <div class="service-icon">💡</div>
-            <h3>Innovación Tecnológica y Sostenibilidad</h3>
-            <p>Incorporación de Industria 4.0, digitalización y estrategias de sostenibilidad. Integración de innovación responsable con rentabilidad y cumplimiento de objetivos ambientales.</p>
-        </div>
-        
-        <div class="service-card">
-            <div class="service-icon">🔗</div>
-            <h3>Supply Chain y Gestión de Compras</h3>
-            <p>Optimización de cadena de suministro y estrategias de aprovisionamiento. Negociación de contratos estratégicos, reducción de costes de materias primas y mejora de la eficiencia logística para garantizar continuidad operativa.</p>
-        </div>
-        
-        <div class="service-card">
-            <div class="service-icon">👥</div>
-            <h3>Desarrollo de Talento</h3>
-            <p>Fortalecimiento del capital humano mediante programas de formación, academias corporativas y planes de sucesión. Creación de equipos de alto rendimiento y reducción de fuga de talento.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Competencies Section -->
-<section id="competencias">
-    <h2 class="section-title">Competencias Clave</h2>
-    <div class="competencies-grid">
-        <div class="competency-item">
-            <h4>Liderazgo Estratégico Global</h4>
-            <p>Experiencia coordinando operaciones en más de 103 plantas a nivel mundial. Capacidad para alinear estrategias industriales complejas con objetivos de negocio en entornos multiculturales.</p>
+    <section id="competencias">
+        <h2 class="section-title">Competencias Clave</h2>
+        <div class="competencies-grid">
+            <div class="competency-item">
+                <h4>Liderazgo Estratégico Global</h4>
+                <p>Experiencia coordinando operaciones en más de 103 plantas a nivel mundial. Capacidad para alinear estrategias industriales complejas con objetivos de negocio en entornos multiculturales.</p>
+            </div>
+            
+            <div class="competency-item">
+                <h4>Gestión Integral de Operaciones</h4>
+                <p>Dirección de plantas industriales de gran escala con equipos de 300+ empleados, logrando niveles de EBIT del 28%. Optimización de procesos y cumplimiento de objetivos financieros ambiciosos.</p>
+            </div>
+            
+            <div class="competency-item">
+                <h4>Excelencia en Procesos</h4>
+                <p>Incremento del 5% en MTBF y mitigación del 87% del impacto inflacionario mediante planificación estratégica. Experto en mejora continua y confiabilidad de activos industriales.</p>
+            </div>
+            
+            <div class="competency-item">
+                <h4>Gestión del Cambio</h4>
+                <p>Transformación de culturas organizacionales en decenas de plantas europeas, logrando incrementos del 34% en EBIT. Capacidad para superar resistencias y generar adopción exitosa de cambios.</p>
+            </div>
+            
+            <div class="competency-item">
+                <h4>Desarrollo de Equipos</h4>
+                <p>Creación de programas de formación que redujeron la rotación de talento en un 10%. Liderazgo cercano que transforma equipos conflictivos en colaborativos de alto rendimiento.</p>
+            </div>
+            
+            <div class="competency-item">
+                <h4>Negociación Estratégica</h4>
+                <p>Acuerdos de suministro a 15 años y reducciones del 15% en costes energéticos. Gestión efectiva de stakeholders, autoridades y negociaciones de alto impacto.</p>
+            </div>
         </div>
-        
-        <div class="competency-item">
-            <h4>Gestión Integral de Operaciones</h4>
-            <p>Dirección de plantas industriales de gran escala con equipos de 300+ empleados, logrando niveles de EBIT del 28%. Optimización de procesos y cumplimiento de objetivos financieros ambiciosos.</p>
-        </div>
-        
-        <div class="competency-item">
-            <h4>Excelencia en Procesos</h4>
-            <p>Incremento del 5% en MTBF y mitigación del 87% del impacto inflacionario mediante planificación estratégica. Experto en mejora continua y confiabilidad de activos industriales.</p>
-        </div>
-        
-        <div class="competency-item">
-            <h4>Gestión del Cambio</h4>
-            <p>Transformación de culturas organizacionales en decenas de plantas europeas, logrando incrementos del 34% en EBIT. Capacidad para superar resistencias y generar adopción exitosa de cambios.</p>
-        </div>
-        
-        <div class="competency-item">
-            <h4>Desarrollo de Equipos</h4>
-            <p>Creación de programas de formación que redujeron la rotación de talento en un 10%. Liderazgo cercano que transforma equipos conflictivos en colaborativos de alto rendimiento.</p>
-        </div>
-        
-        <div class="competency-item">
-            <h4>Negociación Estratégica</h4>
-            <p>Acuerdos de suministro a 15 años y reducciones del 15% en costes energéticos. Gestión efectiva de stakeholders, autoridades y negociaciones de alto impacto.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Impact Stats -->
-<section id="impacto">
-    <h2 class="section-title">Trayectoria de Impacto</h2>
-    <div class="stats">
-        <div class="stat-item">
-            <div class="stat-number">25+</div>
-            <div class="stat-label">Años de experiencia</div>
+    <section id="impacto">
+        <h2 class="section-title">Trayectoria de Impacto</h2>
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">25+</div>
+                <div class="stat-label">Años de experiencia</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">103</div>
+                <div class="stat-label">Plantas coordinadas</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">34%</div>
+                <div class="stat-label">Mejora en EBIT</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">87%</div>
+                <div class="stat-label">Reducción de impacto inflacionario</div>
+            </div>
         </div>
-        <div class="stat-item">
-            <div class="stat-number">103</div>
-            <div class="stat-label">Plantas coordinadas</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">34%</div>
-            <div class="stat-label">Mejora en EBIT</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">87%</div>
-            <div class="stat-label">Reducción de impacto inflacionario</div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Contact Section -->
-<section id="contacto">
-    <div class="contact-wrapper">
-        <h2 class="section-title">¿Listo para transformar tu operación industrial?</h2>
-        <p class="contact-intro">
-            Convirtamos los desafíos de tu empresa en oportunidades de crecimiento sostenible
-        </p>
-        
-        <div class="contact-section">
-            <form id="contactForm" onsubmit="return handleSubmit(event)">
-                <div class="form-group">
-                    <label for="nombre">Nombre *</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="empresa">Empresa</label>
-                    <input type="text" id="empresa" name="empresa">
-                </div>
-                
-                <div class="form-group">
-                    <label for="telefono">Teléfono</label>
-                    <input type="tel" id="telefono" name="telefono">
-                </div>
-                
-                <div class="form-group">
-                    <label for="mensaje">Mensaje *</label>
-                    <textarea id="mensaje" name="mensaje" required></textarea>
-                </div>
-                
-                <button type="submit" class="submit-button">Enviar mensaje</button>
-            </form>
+    <section id="contacto">
+        <div class="contact-wrapper">
+            <h2 class="section-title">¿Listo para transformar tu operación industrial?</h2>
+            <p class="contact-intro">
+                Convirtamos los desafíos de tu empresa en oportunidades de crecimiento sostenible
+            </p>
+            
+            <div class="contact-section">
+                <form action="https://formspree.io/f/TU_FORM_ID" method="POST">
+                    <div class="form-group">
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="_replyto" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" name="empresa">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Enviar mensaje</button>
+                </form>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Footer -->
-<footer>
-    <p>&copy; 2025 Miguel Ángel Urbano Ruiz | Consultoría Industrial Estratégica</p>
-    <p>urbano.org.es</p>
-</footer>
+    <footer>
+        <p>&copy; 2025 Miguel Ángel Urbano Ruiz | Consultoría Industrial Estratégica</p>
+        <p>urbano.org.es</p>
+    </footer>
 
-<script>
-    // Mobile menu toggle
-    function toggleMenu() {
-        const nav = document.getElementById('mainNav');
-        nav.classList.toggle('mobile-open');
-    }
-
-    // Close menu when clicking on a link
-    document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', () => {
+    <script>
+        function toggleMenu() {
             const nav = document.getElementById('mainNav');
-            nav.classList.remove('mobile-open');
+            nav.classList.toggle('mobile-open');
+        }
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                const nav = document.getElementById('mainNav');
+                nav.classList.remove('mobile-open');
+            });
         });
-    });
 
-    // Form submission
-    function handleSubmit(event) {
-        event.preventDefault();
-        
-        // Aquí puedes agregar tu lógica de envío de formulario
-        // Por ejemplo, enviar a un servicio de email o backend
-        
-        const formData = {
-            nombre: document.getElementById('nombre').value,
-            email: document.getElementById('email').value,
-            empresa: document.getElementById('empresa').value,
-            telefono: document.getElementById('telefono').value,
-            mensaje: document.getElementById('mensaje').value
-        };
-        
-        console.log('Formulario enviado:', formData);
-        
-        // Mostrar mensaje de éxito
-        alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
-        
-        // Resetear formulario
-        document.getElementById('contactForm').reset();
-        
-        return false;
-    }
-
-    // Smooth scroll para navegación
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
-    });
-</script>
-```
-
+    </script>
 </body>
 </html>
