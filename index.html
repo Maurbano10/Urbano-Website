@@ -576,7 +576,7 @@
             </p>
             
             <div class="contact-section">
-                <form action="https://formspree.io/f/TU_FORM_ID" method="POST">
+                <form id="contactForm">
                     <div class="form-group">
                         <label for="nombre">Nombre *</label>
                         <input type="text" id="nombre" name="nombre" required>
@@ -584,7 +584,7 @@
                     
                     <div class="form-group">
                         <label for="email">Email *</label>
-                        <input type="email" id="email" name="_replyto" required>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     
                     <div class="form-group">
@@ -601,8 +601,13 @@
                         <label for="mensaje">Mensaje *</label>
                         <textarea id="mensaje" name="mensaje" required></textarea>
                     </div>
+					<input name="honeypot" type="text" autocomplete="off" tabindex="-1"
+       style="position:absolute;left:-9999px;top:-9999px;height:0;width:0;opacity:0;">
+
                     
                     <button type="submit" class="submit-button">Enviar mensaje</button>
+					<p id="status" style="margin-top:1rem;color:var(--text-secondary);"></p>
+
                 </form>
             </div>
         </div>
@@ -638,6 +643,50 @@
                 }
             });
         });
+		
+		const form = document.getElementById('contactForm');
+const statusEl = document.getElementById('status');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  statusEl.textContent = 'Enviando...';
+
+  const fd = new FormData(form);
+
+  const nombre = (fd.get('nombre') || '').toString().trim();
+  const email = (fd.get('email') || '').toString().trim();
+  const empresa = (fd.get('empresa') || '').toString().trim();
+  const telefono = (fd.get('telefono') || '').toString().trim();
+  const mensaje = (fd.get('mensaje') || '').toString().trim();
+  const honeypot = (fd.get('honeypot') || '').toString();
+
+  const asunto = `Nuevo contacto: ${nombre}${empresa ? ' | ' + empresa : ''}`;
+  const cuerpo =
+`Nombre: ${nombre}
+Email: ${email}
+Empresa: ${empresa || '-'}
+Teléfono: ${telefono || '-'}
+---
+Mensaje:
+${mensaje}`;
+
+  try {
+    const r = await fetch('https://pdca.hombresquemultiplican.com/api/email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ asunto, cuerpo, email, honeypot })
+    });
+
+    const data = await r.json().catch(() => ({}));
+    if (!r.ok || !data.ok) throw new Error(data.error || 'Error');
+
+    statusEl.textContent = '¡Enviado! Revisa tu email.';
+    form.reset();
+  } catch (err) {
+    statusEl.textContent = 'No se pudo enviar. Inténtalo más tarde.';
+  }
+});
+
     </script>
 </body>
 </html>
